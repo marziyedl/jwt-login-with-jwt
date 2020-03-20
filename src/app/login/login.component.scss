@@ -1,0 +1,135 @@
+
+.container {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
+  
+  
+  
+  .row {
+    float: left;
+    width: 100%;
+    padding: 20px 0 50px;
+  }
+  
+  
+  /*= Reset CSS End
+  ================= */
+  
+  /*= input focus effects css
+  =========================== */
+  :focus {
+    outline: none;
+  }
+  
+  .col-3 {
+    float: left;
+    width: 27.33%;
+    margin: 40px 3%;
+    position: relative;
+  }
+  /* necessary to give position: relative to parent. */
+  input[type="text"] {
+    font: 15px/24px "Lato", Arial, sans-serif;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    border: none;
+  }
+  
+  .input-effect-parent {
+    border: 1px solid #ccc;
+    padding: 7px 14px;
+    transition: 0.4s;
+    background: transparent;
+    margin: 20px 0;
+    height: 50px;
+  direction: rtl;
+  text-align: right;
+  
+  }
+  .input-effect  {
+    border: 1px solid #ccc;
+    padding: 7px 14px;
+    margin: -10px -5px;
+    direction: rtl;
+    transition: 0.4s;
+    background: transparent;
+    height: 50px;
+  
+  }
+  
+    .input-effect ~ .focus-border:before,
+    .input-effect ~ .focus-border:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #88bf97;
+        transition: 0.3s;
+    }
+  
+    .input-effect ~ .focus-border:after {
+        top: auto;
+        bottom: 0;
+        left: auto;
+        right: 0;
+    }
+  
+    .input-effect ~ .focus-border i:before,
+    .input-effect ~ .focus-border i:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 2px;
+        height: 0;
+        background-color: #88bf97;
+        transition: 0.4s;
+    }
+  
+    .input-effect ~ .focus-border i:after {
+        left: auto;
+        right: 0;
+        top: auto;
+        bottom: 0;
+    }
+  
+    .input-effect:focus ~ .focus-border:before,
+    .input-effect:focus ~ .focus-border:after,
+    .has-content.input-effect ~ .focus-border:before,
+    .has-content.input-effect ~ .focus-border:after {
+        width: 100%;
+        transition: 0.3s;
+    }
+  
+    .input-effect:focus ~ .focus-border i:before,
+    .input-effect:focus ~ .focus-border i:after,
+    .has-content.input-effect ~ .focus-border i:before,
+    .has-content.input-effect ~ .focus-border i:after {
+        height: 100%;
+        transition: 0.4s;
+    }
+  
+    .input-effect ~ label {
+        position: absolute;
+        right:  14px;
+        width: 100%;
+        top: 10px;
+        color: #aaa;
+        transition: 0.3s;
+        z-index: -1;
+        letter-spacing: 0.5px;
+    }
+  
+    .input-effect:focus ~ label, .has-content.input-effect ~ label {
+        top: -18px;
+        left: 85%;
+        font-size: 12px;
+        color: #88bf97;
+        transition: 0.3s;
+    }
+  

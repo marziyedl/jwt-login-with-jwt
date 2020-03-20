@@ -1,0 +1,45 @@
+<div class="container">
+  <form class="was-validated" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <div class="row justify-content-center d-flex">
+      <div class="col-sm-4">
+        <div class="alert alert-danger" *ngIf="loginForm.errors">
+            لطفا تمامی فیلدها را پر کنید.
+          </div>
+          <div *ngIf="error" class="alert alert-danger mt-3 mb-0">{{error}}</div>
+        <div class="col input-effect-parent">
+          <input
+            class="input-effect"
+            type="text"
+            #username
+            formControlName="username"
+            placeholder=""
+          />
+         
+          <label [hidden]="username.value">نام کاربری</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+        </div>
+        <div class="col input-effect-parent">
+          <input
+            class="input-effect"
+            formControlName="password"
+            #password
+            type="text"
+            placeholder=""
+          />
+          <label [hidden]="password.value">پسورد</label>
+          <span class="focus-border">
+            <i></i>
+          </span>
+        </div>
+        <button class="col-sm-12 btn btn-outline-dark btn-lg">
+          ورود
+        </button>
+        <!-- <button class="col-sm-6 btn btn-outline-info btn-lg">
+    ثبت نام
+    </button> -->
+      </div>
+    </div>
+  </form>
+</div>

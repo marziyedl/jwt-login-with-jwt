@@ -1,0 +1,26 @@
+<button class="btn btn-danger" (click)="logout()">خروج</button>
+
+<h1 class="text-right">
+    لیست کاربران
+</h1>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">title</th>
+    <th scope="col">body</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of usersList">
+    <td>{{ user.title}}</td>
+    <td>{{ user.body}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<div class="d-flex justify-content-between p-2">
+  <ngb-pagination [collectionSize]="collectionSize" [(page)]="page" [pageSize]="pageSize">
+  </ngb-pagination>
+
+</div>
+
